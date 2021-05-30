@@ -39,8 +39,6 @@ spring:
     username: srbuser200921
     password: 123456
 
-
-
 mybatis-plus: #mybatis
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
