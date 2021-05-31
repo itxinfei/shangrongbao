@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
 
+/**
+ * 统一返回结果
+ */
 @Getter
 @AllArgsConstructor
 @ToString

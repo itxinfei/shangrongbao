@@ -21,9 +21,6 @@ import java.util.Map;
  * <p>
  * 标的准备表 前端控制器
  * </p>
- *
- * @author Helen
- * @since 2021-02-20
  */
 @Api(tags = "标的管理")
 @RestController

@@ -14,6 +14,9 @@ import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 
+/**
+ *
+ */
 @Api(tags = "借款管理")
 @RestController
 @RequestMapping("/admin/core/borrowInfo")
@@ -34,7 +37,7 @@ public class AdminBorrowInfoController {
     @GetMapping("/show/{id}")
     public R show(
             @ApiParam(value = "借款信息id", required = true)
-            @PathVariable Long id){
+            @PathVariable Long id) {
 
         Map<String, Object> borrowInfoDetail = borrowInfoService.getBorrowInfoDetail(id);
         return R.ok().data("borrowInfoDetail", borrowInfoDetail);

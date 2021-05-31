@@ -33,7 +33,6 @@ import java.util.concurrent.TimeUnit;
 @Service
 public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements DictService {
 
-
     @Resource
     private RedisTemplate redisTemplate;
 

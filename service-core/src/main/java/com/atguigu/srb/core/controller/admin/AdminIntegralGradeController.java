@@ -19,12 +19,9 @@ import java.util.List;
  * <p>
  * 积分等级表 前端控制器
  * </p>
- *
- * @author Helen
- * @since 2021-02-20
  */
 @Api(tags = "积分等级管理")
-//@CrossOrigin
+//@CrossOrigin //解决跨域问题
 @RestController
 @RequestMapping("/admin/core/integralGrade")
 @Slf4j

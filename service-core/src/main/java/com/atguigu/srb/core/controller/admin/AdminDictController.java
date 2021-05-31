@@ -26,15 +26,12 @@ import java.util.List;
  * <p>
  * 数据字典 前端控制器
  * </p>
- *
- * @author Helen
- * @since 2021-02-20
  */
 @Api(tags = "数据字典管理")
 @RestController
 @RequestMapping("/admin/core/dict")
 @Slf4j
-//@CrossOrigin
+@CrossOrigin
 public class AdminDictController {
 
     @Resource
@@ -45,13 +42,10 @@ public class AdminDictController {
     public R batchImport(
             @ApiParam(value = "Excel数据字典文件", required = true)
             @RequestParam("file") MultipartFile file){
-
         try {
             InputStream inputStream = file.getInputStream();
             dictService.importData(inputStream);
-
             return R.ok().message("数据字典数据批量导入成功");
-
         } catch (Exception e) {
             throw new BusinessException(ResponseEnum.UPLOAD_ERROR, e);
         }
@@ -69,11 +63,9 @@ public class AdminDictController {
         EasyExcel.write(response.getOutputStream(), ExcelDictDTO.class).sheet("数据字典").doWrite(dictService.listDictData());
     }
 
-
     /*树形数据的两种加载方案
     方案一：非延迟加载
     需要后端返回的数据结构中包含嵌套数据，并且嵌套数据放在children属性中
-
 
     方案二：延迟加载
     不需要后端返回数据中包含嵌套数据，并且要定义布尔属性hasChildren，表示当前节点是否包含子数据
@@ -85,10 +77,8 @@ public class AdminDictController {
     public R listByParentId(
             @ApiParam(value = "上级节点id", required = true)
             @PathVariable Long parentId){
-
         List<Dict> dictList = dictService.listByParentId(parentId);
         return R.ok().data("list", dictList);
     }
-
 }
 

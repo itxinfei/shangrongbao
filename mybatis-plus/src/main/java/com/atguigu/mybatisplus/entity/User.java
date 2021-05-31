@@ -6,7 +6,7 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
-@TableName(value = "t_user")
+@TableName(value = "user")
 public class User {
 
 //    @TableId(type = IdType.ASSIGN_ID)
@@ -15,10 +15,10 @@ public class User {
 //    @TableId
 //    private Long uid;
 
-    @TableId(value = "uid")
+    @TableId(value = "id")
     private Long id;
 
-    @TableField(value = "username" ) //必须添加
+    @TableField(value = "name" ) //必须添加
     private String name;
 
 //    @TableField(fill = FieldFill.INSERT)
@@ -27,14 +27,14 @@ public class User {
 
 //    @TableField(value = "create_time" ) //多此一举
 //    @TableField(fill = FieldFill.INSERT)
-    private LocalDateTime createTime;
-    @TableField(fill = FieldFill.INSERT_UPDATE)
-    private LocalDateTime updateTime;
+    //private LocalDateTime createTime;
+    //TableField(fill = FieldFill.INSERT_UPDATE)
+    //private LocalDateTime updateTime;
 
 //    private Integer deleted;
-    @TableLogic
-    @TableField(value = "is_deleted")
-    private Boolean deleted;  //0 false 未删除;   1 true 已删除
+    //@TableLogic
+    //@TableField(value = "is_deleted")
+   // private Boolean deleted;  //0 false 未删除;   1 true 已删除
 
 //    @TableLogic
 //    @TableField(value = "is_deleted")

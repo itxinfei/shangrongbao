@@ -25,6 +25,7 @@
         <module>service-oss</module>
         <module>service-gateway</module>
         <module>rabbit-mq</module>
+        <module>srb-demo</module>
     </modules>
 
     <properties>

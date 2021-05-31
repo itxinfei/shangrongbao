@@ -17,9 +17,6 @@ import java.util.List;
  * <p>
  * 用户登录记录表 前端控制器
  * </p>
- *
- * @author Helen
- * @since 2021-02-20
  */
 @Api(tags = "会员登录日志接口")
 @RestController
