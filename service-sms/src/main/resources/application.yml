@@ -9,10 +9,10 @@ spring:
 
   #spring:
   redis:
-    host: 192.168.100.100
+    host: 47.94.207.39
     port: 6379
     database: 0
-    password: 123456My! #默认为空
+    password:  #默认为空
     timeout: 3000ms #最大等待时间，超时则抛出异常，否则请求一直等待
     lettuce:
       pool:
@@ -24,15 +24,15 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848 # nacos服务地址
+        server-addr: 47.94.207.39:8848 # nacos服务地址
 
   #spring:
   rabbitmq:
-    host: 192.168.100.103
+    host: 47.94.207.39
     port: 5672
-    virtual-host: /srbhost20092101
-    username: srbuser200921
-    password: 123456
+    virtual-host: /srb
+    username: pangzhao
+    password: pangzhao
 
 
 feign:
